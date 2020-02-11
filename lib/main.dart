@@ -26,11 +26,11 @@ class MyHomePage extends StatefulWidget {
 
 class HomePage extends State<MyHomePage> {
   List<Pet> petsList = <Pet>[
-    Pet("DOG",
+    Pet("DOGS",
         'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg'),
-    Pet("CAT",
+    Pet("CATS",
         "https://images.unsplash.com/photo-1567170578400-9d182981f2a1?ixlib=rb-1.2.1&w=1000&q=80"),
-    Pet("BIRD",
+    Pet("BIRDS",
         "https://www.audubon.org/sites/default/files/styles/hero_image/public/web_groombaltimoreoriole-and-a-male-red-breasted-grosbeak.jpg?itok=GFL3jy0c"),
     Pet("FISH",
         "https://images.pexels.com/photos/128756/pexels-photo-128756.jpeg"),
@@ -39,7 +39,7 @@ class HomePage extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
         title: Text(
           "PETS",
@@ -59,7 +59,7 @@ class HomePage extends State<MyHomePage> {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
       child: Container(
-        decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.grey,offset:Offset(0.0,1.0),blurRadius: 10.0)]),
+        decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.grey[100],offset:Offset(0.0,1.0),blurRadius: 10.0)]),
         height: 100,
         margin: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
         child: Row(
@@ -79,7 +79,7 @@ class HomePage extends State<MyHomePage> {
                 alignment: Alignment.center,
                 child: Text(petsList[index].petName,style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 20),),
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.white,
                   borderRadius: new BorderRadius.only(
                     topLeft: Radius.circular(0.0),
                     bottomLeft: Radius.circular(0.0),
